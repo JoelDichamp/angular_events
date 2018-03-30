@@ -1,0 +1,13 @@
+<div id="form">
+    <label>
+        <span>Utilisateur</span>
+        <input type="text" [(ngModel)]="form_user.username">
+    </label>
+    <label>
+        <span>Mot de passe</span>
+        <input type="text" [(ngModel)]="form_user.pwd">
+    </label>
+    <button (click)="checkConnection()">Valider</button> 
+
+    <span *ngIf="user.getId() == 0 && error" class="msg">{{ error }}</span>
+</div>

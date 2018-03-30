@@ -1,0 +1,21 @@
+<h2>{{ kindEvent }}</h2>
+<div class="filter" *ngIf="viewfilterEvent">
+<!-- <div class="filter">     -->
+    <span>Filtre</span>
+    <input id="inputFilter" type="text" [(ngModel)]="filter" (ngModelChange)="onFilterChanged()">
+</div>
+<div class="filter no-events" *ngIf="!viewfilterEvent">
+    Aucun évènement !
+</div>
+<div class="container">
+    <app-city-event
+        *ngFor="let cityEvent of cityEvents; index as position"
+        [usedcityevent]="cityEvent"
+        [participatePosition]="position"
+        (onClickPartipate)="participateInEvent($event)"
+        (onClickDescriptionResume)="descriptionResumeEvent($event)"
+
+    >
+    </app-city-event>
+  
+</div>

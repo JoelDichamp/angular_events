@@ -1,0 +1,56 @@
+.city-event {
+    width: 250px;
+    height: 300px;
+    padding: 10px;
+    margin: 10px;
+    background-color: #c3d3eb;
+    border: 2px solid black;
+    text-align: center;
+    overflow: auto;
+    /*text-transform: capitalize;*/
+    position: relative;
+}
+
+.city-event h3 {
+    color: blue;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    /* text-transform: capitalize */
+}
+
+.city-event .infos {
+    color: rgb(211, 89, 89);
+}
+
+.description {
+    color: green;
+    text-align: justify;
+    margin-bottom: 10px;
+    padding: 5px;
+    border: 1px solid blue;
+}
+
+.date {
+    font-weight: bold;
+}
+
+.participate {
+    cursor: pointer;
+}
+
+.colorNotParticipated{
+    background-color: #c3d3eb;
+    color: black;
+}
+
+.colorEventInProgress{
+    background-color: blue;
+    color: white;
+}
+
+.colorPastEvent{
+    background-color: red;
+    color: white;
+}
+
+   

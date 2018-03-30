@@ -1,0 +1,25 @@
+<div class="city-event">
+    <!-- <span class="participate" title="Participer ou non à l'évènement" (click)="participateInEvent()">📆</span> -->
+    <button title="Participer ou non à l'évènement" (click)="participateInEvent()">
+        <span *ngIf=usedcityevent.getParticipated()>Non Participation</span>
+        <span *ngIf=!usedcityevent.getParticipated()>Participation</span>
+    </button>
+
+    <button title="Description ou résumé de l'évènement" (click)="descriptionResumeEvent()">
+        <span *ngIf=usedcityevent.getVisible_description()>Résumé</span>
+        <span *ngIf=!usedcityevent.getVisible_description()>Description</span>
+    </button>
+
+    <h3>{{ usedcityevent.getEvent_name() }}</h3>
+
+    <p class="infos">{{ usedcityevent.getCategory().getCategory_name()}}</p>
+
+    <!-- <p>{{ usedcityevent.getDescription() | resume:30 }}</p> -->
+    <p class="description" *ngIf=usedcityevent.getVisible_description() >{{ usedcityevent.getDescription() }}</p>
+    <p class="description" *ngIf=!usedcityevent.getVisible_description() >{{ usedcityevent.getDescription() | resume:20 }}</p>
+
+    <p class="infos">{{ usedcityevent.getSpot() }}</p>
+
+    <!-- <p appBg> <i> {{ usedcityevent.getDate() | date:"dd/MM/yyyy" }} </i></p> -->
+    <p class="date {{usedcityevent.getClassDate()}}"> <i> {{ usedcityevent.getDate() | date:"dd/MM/yyyy - HH'H'mm" }} </i></p>
+</div>
